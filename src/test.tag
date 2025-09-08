@@ -10,13 +10,13 @@ c = 5;
 b = 5 + 4 % (2 + 3) - 5;
 
 out("hi");
-
+if (b) {}
 if (a) {
     print("HI");
 }
 
 loop (a) {
-    fn main(a, b, c) 
+    fn main(a, b, c) {
 
         a = 10 + 9 + 8;
 

@@ -381,17 +381,17 @@ impl Parser {
         let thetype = self.current()?.ttype.clone();
         let thenum = self.current()?.line_num;
         let theval = self.current()?.value.clone();
-
         loop {
 
             if thetype == TokenType::Ccl {
                 break;
             }
 
-            match self.parse_statement() {
+            let node = self.parse_statement();
+            match node {
                 Ok(node) => statements.push(node),
                 Err(_) => {
-                    return Err(ParserError::UnexpectedToken(theval, thenum));
+                    break;
                 }
             }
         } 
