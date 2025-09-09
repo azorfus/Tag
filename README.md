@@ -1,2 +1,2 @@
 # Tag
-A dead parser written for a hopeful dream. I gave up.
+A complete working parser with error detection for a compiler I was working on
